@@ -1,0 +1,8 @@
+.cardField {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeoI-H1Oq2PfQ9HGE9Orkb44eCfAZKpamSrw&usqp=CAU);
+    /*     background-size: 100%; */
+}
