@@ -1,0 +1,12 @@
+.congratulation {
+    color: #ffffff;
+    text-shadow: 2px 2px #5f5f5f, 3px 3px #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    margin: auto;
+    font-weight: 600;
+    font-style: italic;
+}

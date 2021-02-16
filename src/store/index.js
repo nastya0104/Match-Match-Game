@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
-import cardsReducer from '../containers/CardsFieldContainer/reducer';
+import matchGameReducer from '../containers/CardsFieldContainer/reducer';
 
-const store = createStore(cardsReducer);
+const store = createStore(matchGameReducer);
+console.log(store.getState());
 
 export default store;

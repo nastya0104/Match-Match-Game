@@ -3,6 +3,11 @@
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeoI-H1Oq2PfQ9HGE9Orkb44eCfAZKpamSrw&usqp=CAU);
-    /*     background-size: 100%; */
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
