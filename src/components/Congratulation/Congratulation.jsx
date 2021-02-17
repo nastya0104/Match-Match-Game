@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import ButtonBack from '../ButtonBack';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import converterTime from '../Timer/converterTime';
 
 export default function Congratulation({ stopTimer, time }) {
     useEffect(
@@ -12,10 +12,10 @@ export default function Congratulation({ stopTimer, time }) {
 
     return (
         <div>
-            <div className={styles.congratulation}>
-                {`Поздравляем! Время - ${time} секунд.`}
+            <div className={styles.container}>
+                <div className={styles.congratulation}>Поздравляем!</div>
+                <div className={styles.result}>{`Ваше время - ${converterTime(time)}`}</div>
             </div>
-            <ButtonBack />
         </div>
     );
 }

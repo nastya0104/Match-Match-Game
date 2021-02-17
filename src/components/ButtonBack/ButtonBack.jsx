@@ -5,10 +5,12 @@ import styles from './styles.module.css';
 
 export default function ButtonBack({ onClick }) {
     return (
-        <Link to="/">
-            <button onClick={onClick} className={styles.button}>
-                Назад
-            </button>
-        </Link>
+        <div className={styles.a}>
+            <Link to="/">
+                <button onClick={onClick} className={styles.button}>
+                    Назад
+                </button>
+            </Link>
+        </div>
     );
 }

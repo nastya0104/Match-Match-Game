@@ -7,8 +7,8 @@ import Menu from '../Menu';
 export default function WelcomePage() {
     return (
         <div className={styles.container}>
-            <ButtonStart />
             <p>MATCHING GAME</p>
+            <ButtonStart />
             <Menu />
         </div>
     );

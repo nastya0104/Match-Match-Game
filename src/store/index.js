@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import matchGameReducer from '../containers/CardsFieldContainer/reducer';
+import matchGameReducer from './reducer';
 
 const store = createStore(matchGameReducer);
 console.log(store.getState());

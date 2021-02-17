@@ -5,10 +5,12 @@ import styles from './styles.module.css';
 
 export default function ButtonStart() {
     return (
-        <Link to="game">
-            <button className={styles.button}>
-                Старт
-            </button>
-        </Link>
+        <div className={styles.a}>
+            <Link to="game">
+                <button className={styles.button}>
+                    Старт
+                </button>
+            </Link>
+        </div>
     );
 }

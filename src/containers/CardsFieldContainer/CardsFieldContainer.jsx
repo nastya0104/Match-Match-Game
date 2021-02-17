@@ -38,7 +38,7 @@ export default function CardsFieldContainer() {
     const goBack = () => {
         dispatch(resetCardsField());
         stopTimer();
-    }
+    };
 
     const onClick = useCallback((index, src) => {
         if (isBlockedClick) return;
@@ -71,9 +71,9 @@ export default function CardsFieldContainer() {
                 <>
                     <CardsField onClick={onClick} cards={cards} />
                     <Timer time={time} startTimer={startTimer} stopTimer={stopTimer} />
-                    <ButtonBack onClick={goBack} />
                 </>
             )}
+            <ButtonBack onClick={goBack} />
         </>
     );
 }
