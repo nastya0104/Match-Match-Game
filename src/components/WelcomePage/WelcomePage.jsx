@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.css';
 import ButtonStart from '../ButtonStart';
-import Menu from '../Menu';
+import Menu from '../../containers/Menu';
 
 export default function WelcomePage() {
     return (

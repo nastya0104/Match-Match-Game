@@ -6,7 +6,18 @@ export default function PlayerForm({ onSubmit, player }) {
     return (
         <div className={`${styles.blockField} ${player ? styles.hidden : ''}`}>
             <form className={styles.playerForm} onSubmit={onSubmit}>
-                <div className={styles.formItem}>
+                <label className={styles.formItem}>
+                    <input type="text" placeholder="Имя" />
+                </label>
+                <label className={styles.formItem}>
+                    <input type="text" placeholder="Фамилия" />
+                </label>
+                <label className={styles.formItem}>
+                    <input type="email" placeholder="Email" id="email" />
+                </label>
+
+
+                {/* <div className={styles.formItem}>
                     <label htmlFor="firstName">Ваше имя:</label>
                     <input type="text" id="firstName" />
                 </div>
@@ -17,7 +28,7 @@ export default function PlayerForm({ onSubmit, player }) {
                 <div className={styles.formItem}>
                     <label htmlFor="email">Ваш Email:</label>
                     <input type="email" id="email" />
-                </div>
+                </div> */}
                 <input type="submit" value="ВХОД" className={styles.buttonForm} />
             </form>
         </div>

@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .blockField.hidden {
@@ -22,11 +23,12 @@
     flex-direction: column;
 }
 
-label {
+/* label {
     display: block;
-}
+} */
 
 .formItem {
+    display: block;
     padding: 15px;
     font-weight: 600;
     font-family: sans-serif;
