@@ -10,7 +10,6 @@ export default function CardsFieldContainer() {
     const dispatch = useDispatch();
     const openedCard = useSelector((state) => state.cardsReducer.openedCard);
     const isBlockedClick = useSelector((state) => state.cardsReducer.isBlockedClick);
-
     const cards = useSelector((state) => state.cardsReducer.cards);
 
     const onClick = useCallback((index, src) => {

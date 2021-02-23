@@ -1,7 +1,7 @@
 import { SET_PLAYER } from './playFormActions';
 
 const initialState = {
-    player: localStorage.getItem('matchGamePlayer'),
+    player: JSON.parse(localStorage.getItem('matchGamePlayer')),
 };
 
 export default function playFormReducer(state = initialState, action) {

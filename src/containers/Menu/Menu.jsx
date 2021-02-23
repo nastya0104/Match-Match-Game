@@ -15,6 +15,9 @@ import {
 export default function Menu() {
     const dispatch = useDispatch();
 
+    const results = useSelector((state) => state.timerReducer.results);
+    const player = useSelector((state) => state.playFormReducer.player);
+    const complexityValue = useSelector((state) => state.menuReducer.complexity);
     const visibleItemName = useSelector((state) => state.menuReducer.visibleItem);
 
     const showPopup = (e) => {
@@ -43,13 +46,13 @@ export default function Menu() {
                 {visibleItemName === rules ? <RulesPopup name={rules} /> : ''}
             </MenuItem>
             <MenuItem name={complexity} onClick={showPopup}>
-                {visibleItemName === complexity ? <ComplexityPopup onChange={selectComplexity} name={complexity} /> : ''}
+                {visibleItemName === complexity ? <ComplexityPopup onChange={selectComplexity} name={complexity} value={complexityValue} /> : ''}
             </MenuItem>
             <MenuItem name={cardsShirt} onClick={showPopup}>
                 {visibleItemName === cardsShirt ? <CardShirtPopup name={cardsShirt} /> : ''}
             </MenuItem>
             <MenuItem name={top} onClick={showPopup}>
-                {visibleItemName === top ? <TopPopup name={top} /> : ''}
+                {visibleItemName === top ? <TopPopup name={top} results={results} player={player} /> : ''}
             </MenuItem>
         </div>
     );

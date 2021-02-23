@@ -5,6 +5,7 @@ import {
 const initialState = {
     time: 0,
     timer: null,
+    result: null,
 };
 
 export default function timerReducer(state = initialState, action) {
@@ -20,6 +21,7 @@ export default function timerReducer(state = initialState, action) {
             return {
                 ...state,
                 time: 0,
+                result: state.time,
             };
         }
 

@@ -1,12 +1,13 @@
 import {
-    SET_CARDS_SHIRT, SET_VISIBLE_ITEM, SET_COMPLEXITY, SET_RESULT,
+    SET_CARDS_SHIRT, SET_VISIBLE_ITEM, SET_COMPLEXITY,
 } from './menuActions';
+import { potterCardShirt } from '../../assets/img/potter/potter';
 
 const initialState = {
-    complexity: 12,
+    complexity: '12',
     visibleItem: null,
-    cardsShirt: 'img/harryPotter/cardShirt.jpg',
-    results: [],
+    cardsShirt: potterCardShirt,
+    results: JSON.parse(localStorage.getItem('matchGameResults')) || [],
 };
 
 export default function menuReducer(state = initialState, action) {
@@ -21,17 +22,14 @@ export default function menuReducer(state = initialState, action) {
         case SET_COMPLEXITY: {
             return {
                 ...state,
-                gameDifficulty: action.data,
+                complexity: action.data,
             };
         }
 
-        case SET_RESULT: {
+        case SET_CARDS_SHIRT: {
             return {
                 ...state,
-                results: (() => {
-                    const newResults = state.results.slice(0).push(action.data);
-                    return newResults.sort((a, b) => a.time - b.time).slice(0, 10);
-                })(),
+                cardsShirt: action.data,
             };
         }
 
