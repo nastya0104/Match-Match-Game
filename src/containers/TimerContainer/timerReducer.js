@@ -1,11 +1,11 @@
 import {
-    SET_TIME, CLEAR_TIME,
+    SET_RESULT, SET_TIME, CLEAR_TIME,
 } from './timerActions';
 
 const initialState = {
     time: 0,
     timer: null,
-    result: null,
+    results: JSON.parse(localStorage.getItem('matchGameResults')) || [],
 };
 
 export default function timerReducer(state = initialState, action) {
@@ -21,7 +21,16 @@ export default function timerReducer(state = initialState, action) {
             return {
                 ...state,
                 time: 0,
-                result: state.time,
+                resultTime: state.time,
+            };
+        }
+
+        case SET_RESULT: {
+            const newResults = [...state.results, { result: state.time, cardsAmount: action.data }].sort((a, b) => a.result - b.result).slice(0, 10);
+            localStorage.setItem('matchGameResults', JSON.stringify(newResults));
+            return {
+                ...state,
+                results: newResults,
             };
         }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -8,11 +8,11 @@ import WelcomePage from '../../components/WelcomePage';
 import { setPlayer } from './playFormActions';
 import PlayerForm from '../../components/PlayerForm';
 
-function MatchGameContainer() {
+export default function MatchGameContainer() {
     const player = useSelector((state) => state.playFormReducer.player);
     const dispatch = useDispatch();
 
-    const savePlayer = (e) => {
+    const savePlayer = useCallback((e) => {
         e.preventDefault();
         const inputs = [...e.currentTarget.elements].slice(0, 3);
         inputs.forEach((item) => {
@@ -32,7 +32,7 @@ function MatchGameContainer() {
             dispatch(setPlayer(matchGamePlayer));
             localStorage.setItem('matchGamePlayer', JSON.stringify(matchGamePlayer));
         }
-    };
+    }, [dispatch]);
 
     return (
         <>
@@ -45,5 +45,3 @@ function MatchGameContainer() {
         </>
     );
 }
-
-export default React.memo(MatchGameContainer);

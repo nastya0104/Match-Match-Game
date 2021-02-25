@@ -5,7 +5,7 @@ import {
 const initialState = {
     isBlockedClick: false,
     openedCard: null,
-    cards: null,
+    cards: [],
     hiddenCards: 0,
     isWin: false,
 };
@@ -31,6 +31,7 @@ export default function cardsReducer(state = initialState, action) {
                 ...state,
                 cards: initialState.cards,
                 isWin: false,
+                hiddenCards: 0,
             };
         }
 

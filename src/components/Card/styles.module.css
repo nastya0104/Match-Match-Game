@@ -2,13 +2,18 @@
   position: relative;
   perspective: 1000px;
   margin: 0.4%;
-  width: 11%;
-  padding-bottom: calc(11% * 1.33);
+  width: 14%;
+  padding-bottom: calc(14% * 1.33);
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
   border: 2px solid #bbb;
   cursor: pointer;
+}
+
+.flipCard.small {
+  width: 11%;
+  padding-bottom: calc(11% * 1.33);
 }
 
 .opened {

@@ -7,7 +7,7 @@ export default function ButtonStart() {
     return (
         <div className={styles.a}>
             <Link to="game">
-                <button className={styles.button}>
+                <button type="button" className={styles.button}>
                     Старт
                 </button>
             </Link>

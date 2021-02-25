@@ -1,5 +1,13 @@
+export const SET_RESULT = 'SET_RESULT';
 export const SET_TIME = 'SET_TIME';
 export const CLEAR_TIME = 'CLEAR_TIME';
+
+export function setResult(data) {
+    return {
+        type: SET_RESULT,
+        data,
+    };
+}
 
 export function setTime() {
     return {

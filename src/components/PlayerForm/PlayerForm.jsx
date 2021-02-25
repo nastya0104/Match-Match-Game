@@ -1,16 +1,17 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import styles from './styles.module.css';
 
-export default function PlayerForm({ onSubmit, player }) {
+function PlayerForm({ onSubmit, player }) {
     return (
         <div className={`${styles.blockField} ${player ? styles.hidden : ''}`}>
             <form className={styles.playerForm} onSubmit={onSubmit}>
                 <label className={styles.formItem}>
-                    <input type="text" placeholder="Имя" />
+                    <input type="text" placeholder="Имя" id="firstName" />
                 </label>
                 <label className={styles.formItem}>
-                    <input type="text" placeholder="Фамилия" />
+                    <input type="text" placeholder="Фамилия" id="lastName" />
                 </label>
                 <label className={styles.formItem}>
                     <input type="email" placeholder="Email" id="email" />
@@ -34,3 +35,10 @@ export default function PlayerForm({ onSubmit, player }) {
         </div>
     );
 }
+
+PlayerForm.propTypes = {
+    player: propTypes.any.isRequired,
+    onSubmit: propTypes.func.isRequired,
+};
+
+export default React.memo(PlayerForm);

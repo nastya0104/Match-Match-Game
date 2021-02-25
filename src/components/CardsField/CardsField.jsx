@@ -4,11 +4,11 @@ import propTypes from 'prop-types';
 import Card from '../Card';
 import styles from './styles.module.css';
 
-function CardField({ cards, onClick }) {
+function CardField({ cards, onClick, cardsShirt }) {
     return (
         <div className={styles.cardField}>
             {
-                cards.map((card) => <Card key={card.index} cardShirt="img/harryPotter/cardShirt.jpg" index={card.index} onClick={onClick} picture={card.src} opened={card.opened} hidden={card.hidden} />)
+                cards.map((card) => <Card key={card.index} cardsAmount={cards.length} cardsShirt={cardsShirt} index={card.index} onClick={onClick} picture={card.src} opened={card.opened} hidden={card.hidden} />)
             }
         </div>
     );
@@ -17,6 +17,7 @@ function CardField({ cards, onClick }) {
 CardField.propTypes = {
     cards: propTypes.array.isRequired,
     onClick: propTypes.func.isRequired,
+    cardsShirt: propTypes.string.isRequired,
 };
 
 export default React.memo(CardField);

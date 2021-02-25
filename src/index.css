@@ -17,7 +17,7 @@ body, html, #root, .App {
 }
 
 .App {
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeoI-H1Oq2PfQ9HGE9Orkb44eCfAZKpamSrw&usqp=CAU);
+  background: url(./assets/img/background.png);
   position: relative;
   display: flex;
   /* flex-direction: column;
