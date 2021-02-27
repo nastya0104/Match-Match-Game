@@ -18,7 +18,6 @@ export default function Menu() {
     const complexityValue = useSelector((state) => state.menuReducer.complexity);
     const visibleItemName = useSelector((state) => state.menuReducer.visibleItem);
     const cardsShirtValue = useSelector((state) => state.menuReducer.cardsShirt);
-
     const showPopup = useCallback((e) => {
         const eventElemName = e.currentTarget.dataset.name;
         if (eventElemName === visibleItemName) {

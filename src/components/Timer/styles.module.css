@@ -1,15 +1,17 @@
 .timer {
     color: #fff;
+    font-family: 'Caveat', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 48px;
     position: absolute;
-    top: 4%;
+    top: 3%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .timeIsUp {
     color: #fff;
-    font-size: 30px;
     margin: 0 auto;
+    font-family: 'Caveat', sans-serif;
+    font-size: 48px;
 }

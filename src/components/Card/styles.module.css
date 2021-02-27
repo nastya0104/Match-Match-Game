@@ -16,6 +16,12 @@
   padding-bottom: calc(11% * 1.33);
 }
 
+.flipCard.middle {
+  width: 11%;
+  padding-bottom: calc(11% * 1.33);
+  margin: 7px 27px;
+}
+
 .opened {
   transform: rotateY(180deg);
 }

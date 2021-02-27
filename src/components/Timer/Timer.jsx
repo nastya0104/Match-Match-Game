@@ -15,15 +15,14 @@ function Timer({ time, startTimer, stopTimer }) {
     const minutes = Math.floor(time / 60);
 
     const renderTimeIsUp = () => {
-        stopTimer();
         return <div className={styles.timeIsUp}>Время истекло</div>;
     };
 
     return (
         <div className={styles.timer}>
-            { minutes >= 60 
-            ? renderTimeIsUp()
-            : converterTime(time)
+            { minutes >= 60
+                ? renderTimeIsUp()
+                : converterTime(time)
             }
         </div>
     );

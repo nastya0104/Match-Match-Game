@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import propTypes from 'prop-types';
 
 import CardsField from '../../components/CardsField';
 import {
@@ -43,9 +42,5 @@ function CardsFieldContainer() {
         <CardsField onClick={onClick} cards={cards} cardsShirt={cardsShirt} />
     );
 }
-
-CardsFieldContainer.propTypes = {
-    cardsShirt: propTypes.string.isRequired,
-};
 
 export default React.memo(CardsFieldContainer);

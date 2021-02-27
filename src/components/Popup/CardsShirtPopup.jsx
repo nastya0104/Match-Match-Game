@@ -9,18 +9,20 @@ function CardsShirtPopup({ name, onChange, value }) {
     return (
         <div className={`${styles.popupContainer} ${styles.cardsShirtContainer}`} >
             <h4>{name}</h4>
-            <label>
-                <input type="radio" name={name} value={potterCardShirt} onChange={onChange} checked={value === potterCardShirt} />
-                <div className={styles.cardShirt}>
-                    <img src={potterCardShirt} alt="Harry Potter" />
-                </div>
-            </label>
-            <label>
-                <input type="radio" name={name} value={catCardShirt} onChange={onChange} checked={value === catCardShirt} />
-                <div className={styles.cardShirt}>
-                    <img src={catCardShirt} alt="Simon's Cat" />
-                </div>
-            </label>
+            <div className={styles.containerCards}>
+                <label>
+                    <input type="radio" name={name} value={potterCardShirt} onChange={onChange} checked={value === potterCardShirt} />
+                    <div className={styles.cardShirt}>
+                        <img src={potterCardShirt} alt="Harry Potter" />
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" name={name} value={catCardShirt} onChange={onChange} checked={value === catCardShirt} />
+                    <div className={styles.cardShirt}>
+                        <img src={catCardShirt} alt="Simon's Cat" />
+                    </div>
+                </label>
+            </div>
         </div >
     );
 }

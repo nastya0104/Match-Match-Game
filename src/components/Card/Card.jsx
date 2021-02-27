@@ -7,7 +7,7 @@ function Card({
     cardsShirt, picture, opened, hidden, onClick, index, cardsAmount,
 }) {
     return (
-        <div className={`${styles.flipCard} ${opened ? `${styles.opened}` : ''} ${hidden ? `${styles.hidden}` : ''} ${cardsAmount === 24 ? `${styles.small}` : ''}`}
+        <div className={`${styles.flipCard} ${opened ? `${styles.opened}` : ''} ${hidden ? `${styles.hidden}` : ''} ${cardsAmount === 24 ? `${styles.small}` : ''} ${cardsAmount === 18 ? `${styles.middle}` : ''}`}
             onClick={() => onClick(index, picture)}>
             <div className={styles.flipCardFront} style={{ backgroundImage: `url(${cardsShirt})` }}></div>
             <div className={styles.flipCardBack} style={{ backgroundImage: `url(${picture})` }}></div>

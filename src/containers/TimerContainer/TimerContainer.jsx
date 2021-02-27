@@ -11,6 +11,7 @@ function TimerContainer({ isWin, cardsAmount }) {
     const dispatch = useDispatch();
     const time = useSelector((state) => state.timerReducer.time);
     const timerId = useRef(null);
+    
     const startTimer = useCallback(() => {
         timerId.current = setInterval(() => {
             dispatch(setTime());

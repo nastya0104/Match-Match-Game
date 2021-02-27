@@ -4,9 +4,9 @@
     display: flex;
     flex-direction: column;
     color: #000;
-    font-family: sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 600;
-    padding: 5px;
+    padding: 5px 15px;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,24 +15,29 @@
 
 h4 {
     padding: 10px;
-    margin: 0;
+    margin: auto;
 }
 
 .cardsShirtContainer {
     position: absolute;
-    top: -85%;
+    top: -70%;
     left: 105%;
+}
+
+.containerCards {
+    display: flex;
+    flex-direction: row;
 }
 
 .rulesContainer {
     position: absolute;
-    top: -80%;
+    top: -90%;
     left: 105%;
 }
 
 .complexityContainer {
     position: absolute;
-    top: -45%;
+    top: -50%;
     left: 105%;
 }
 
@@ -44,18 +49,22 @@ h4 {
 
 .resultContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.topDiv {
+    padding-right: 15px;
 }
 
 img {
-    max-height: 60px;
-    max-width: 45px;
+    max-height: 120px;
+    max-width: 90px;
 }
 
 .cardShirt {
     background: #fff;
-    height: 60px;
-    width: 45px;
+    height: 120px;
+    width: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,4 +75,13 @@ label {
     align-items: center;
     justify-content: center;
     margin: 5px;
+}
+
+.complexityContainer label {
+    justify-content: start;
+}
+
+.playerName {
+    padding-bottom: 10px;
+    margin: auto;
 }
