@@ -1,0 +1,104 @@
+.container {
+    position: relative;
+}
+
+.containerMain {
+    position: relative;
+    display: inline-block;
+}
+
+.menuItemContainer {
+    padding: 0;
+    vertical-align: text-top;
+    display: flex;
+    margin: 8px 0;
+    width: fit-content;
+}
+
+.menuItem {
+    background: rgba(0, 0, 0, 0.651);
+    padding: 15px 25px;
+    width: 250px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    transition: all .4s;
+}
+
+.menuItem:hover {
+    cursor: pointer;
+    background: #ffffff94;
+    color: #000;
+}
+
+h4 {
+    padding: 10px;
+    margin: 0;
+}
+
+.arrow {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin: 10px;
+}
+
+.arrow div {
+    position: relative;
+    width: 17px;
+    height: 2.5px;
+    background-color: #fff;
+    display: block;
+    transition: all .4s;
+}
+
+.arrow div::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: -3px;
+    right: -3px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    transition: all .4s;
+}
+
+.arrow div::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 3px;
+    right: -3px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    transition: all .4s;
+}
+
+.menuItem:hover .arrow {
+    animation: arrow 1s linear infinite;
+}
+
+.menuItem:hover .arrow div, .menuItem:hover .arrow div::before, .menuItem:hover .arrow div::after {
+    background-color: #000;
+}
+
+@keyframes arrow {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+}

@@ -1,0 +1,71 @@
+.blockField {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(240, 240, 240, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.blockField.hidden {
+    display: none;
+}
+
+.playerForm {
+    padding: 20px;
+    /* background: rgb(224, 255, 210); */
+    background: linear-gradient(130deg, rgba(255, 255, 255, 1) 0%, rgba(224, 255, 210, 1) 27%, rgba(224, 255, 210, 1) 65%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formItem {
+    display: block;
+    padding: 10px;
+    color: rgb(59, 59, 59);
+}
+
+.formItem input {
+    font-family: 'Raleway', cursive;
+    font-size: 16px;
+    color: #000;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttonForm {
+    font-size: 18px;
+    font-family: 'Caveat', cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px #a3a3a3;
+    background: rgb(75, 75, 75);
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    align-self: center;
+    margin: 10px 0 10px;
+    transition: all .4s;
+}
+
+.buttonForm:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(75, 75, 75);
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.welcome p {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    text-shadow: 1px 1px #a3a3a3;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-align: center;
+    margin: 5px 0;
+}
