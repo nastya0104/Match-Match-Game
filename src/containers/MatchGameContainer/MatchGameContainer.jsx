@@ -38,7 +38,7 @@ export default function MatchGameContainer() {
         <>
             <PlayerForm onSubmit={savePlayer} player={player} />
             <BrowserRouter>
-                <Route exact path="/Match-Match-Game" component={WelcomePage} />
+                <Route exact path="/" component={WelcomePage} />
                 <Route path="/game" component={MainContainer} />
             </BrowserRouter>
         </>
